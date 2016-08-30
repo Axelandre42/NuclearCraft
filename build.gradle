@@ -48,17 +48,10 @@ dependencies {
 	compile files('lib/industrialcraft-2-2.2.811-experimental-api.jar')
 }
 
-sourceSets {
-	main {
-		java { srcDirs = ["$projectDir/java"] }
-		resources { srcDirs = ["$projectDir/resources"] }
-	}
-}
-
 processResources {
 	exclude '**/Thumbs.db'
 }
 
 archivesBaseName = "NuclearCraft"
-version = "1.9c--1.7.10"
+version = "1.9c-build_" + System.getenv("BUILD_NUMBER") + "-1.7.10"
 minecraft.version = "10.13.4.1558-1.7.10"
